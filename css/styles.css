@@ -76,7 +76,12 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Capa por defecto */
+    transition: z-index 0.4s;
+}
+/* Regla clave para elevar el header cuando el menú está abierto */
+.header.menu-open {
+    z-index: 1002;
 }
 
 .nav {
@@ -90,7 +95,6 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    /* CORRECCIÓN: Quita el subrayado del enlace del logo */
     text-decoration: none;
 }
 
@@ -137,10 +141,11 @@ body {
 }
 
 .nav__toggle {
-    display: none;
+    display: none; /* Oculto en escritorio */
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    z-index: 1003; /* El botón siempre debe estar encima de todo */
 }
 
 .nav__toggle span {
@@ -152,16 +157,35 @@ body {
     transition: all 0.3s ease;
 }
 
-/* --- Home Section --- */
+/* Estilos por defecto para la sección home (aplican primero a móviles) */
 .home {
     color: var(--light-text-color);
     text-align: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Altura normal para pantallas pequeñas */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 20px; /* Asegura un padding básico en móviles */
+}
+
+/* Media Query para pantallas más grandes (ej. tabletas y escritorios) */
+@media (min-width: 768px) {
+    .home {
+        min-height: 130vh; /* Altura más grande para escritorios */
+    }
+
+    .home__title {
+        font-size: 3.5rem; /* Ajuste opcional para títulos en escritorio */
+    }
+
+    .home__subtitle {
+        font-size: 1.25rem; /* Ajuste opcional para subtítulos en escritorio */
+        max-width: 700px; /* Limita el ancho del subtítulo para mejor lectura */
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Modifica esta regla existente */
@@ -222,10 +246,12 @@ body {
 .vocation__card {
     background-color: transparent;
     height: 250px;
-    perspective: 1000px; /* Profundidad de la escena 3D */
+    perspective: 1000px;
     border: none;
     box-shadow: none;
+    transform: translateZ(0); /* CORRECCIÓN: Fuerza la aceleración por hardware en Safari */
 }
+
 
 /* Contenedor interno que realizará la animación de volteo */
 .vocation__card-inner {
@@ -234,6 +260,7 @@ body {
     height: 100%;
     transition: transform 0.7s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* CORRECCIÓN: Prefijo para compatibilidad con Safari */
 }
 
 /* Activa la animación al pasar el mouse sobre el contenedor principal */
@@ -469,12 +496,11 @@ body {
     border-radius: 15px;
 }
 
-.footer__about p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    max-width: 350px; /* Evita que el texto se estire demasiado */
+.footer__about-content p {
+    margin-bottom: 1rem;
+    max-width: 350px;
 }
+
 
 .footer__social {
     display: flex;
@@ -563,9 +589,17 @@ body {
        align-items: center;
        text-align: center;
     }
-    .footer__about {
-        max-width: 400px;
+    .footer__about .footer__logo-img {
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    .footer__about-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
     .footer__social {
         justify-content: center;
     }
@@ -581,16 +615,46 @@ body {
     .footer__links--sitemap {
         display: none;
     }
+    
+    .footer__grid {
+        /* Mantenemos el apilado general, pero quitamos el centrado */
+        flex-direction: column;
+        align-items: stretch; /* Estira los items para ocupar el ancho */
+        text-align: left; /* Alineamos todo el texto a la izquierda por defecto */
+    }
+    .footer__about {
+        /* Convertimos esta sección en un contenedor flex horizontal */
+        display: flex;
+        align-items: flex-start; /* Alinea el logo y el texto en la parte superior */
+        gap: 1.5rem; /* Espacio entre el logo y el texto */
+        margin-bottom: 2rem; /* Espacio antes de los enlaces de abajo */
+    }
+    .footer__about .footer__logo-img {
+        /* Hacemos el logo un poco más pequeño y evitamos que se encoja */
+        max-width: 100px;
+        flex-shrink: 0;
+    }
+    .footer__about-content p {
+        margin-bottom: 1rem;
+    }
+    .footer__social {
+        /* Alineamos los iconos a la izquierda debajo del texto */
+        justify-content: flex-start;
+    }
 
     .footer__navigation {
-        gap: 2rem;
-        flex-direction: column;
-        align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    flex-direction: row; /* Pone los elementos en una fila horizontal */
+    justify-content: space-between; /* Alinea los grupos a los extremos */
+    align-items: flex-start;
+    margin-top: 0;
     }
+
      .footer__back-to-top {
         margin-left: 0; /* Quitamos el margen en móvil */
     }
 }
+
 
 /* NUEVO: Clases para la animación de scroll */
 .hidden {
@@ -602,6 +666,24 @@ body {
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Estilos para el Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001; /* Capa intermedia: oscurece el fondo */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* --- Responsive Design --- */
@@ -624,35 +706,41 @@ body {
     .nav__logo-text {
         display: none;
     }
+    /* Ocultamos la lista de navegación de escritorio */
+    .nav .nav__list {
+        display: none;
+    }
 
     .nav__toggle {
         display: flex;
     }
 
+    /* Dentro de @media (max-width: 768px) */
+
     .nav__menu {
         position: fixed;
-        top: 5.5rem;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 5.5rem);
-        background-color: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        transition: right 0.4s ease;
+        top: 0;
+        right: -80%;
+        width: 70%;
+        height: 100%;
+        background-color: #ffffff; /* Fondo blanco sólido */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.4s ease-in-out;
+        padding-top: 6rem;
+        z-index: 1002; 
     }
 
     .nav__menu.active {
         right: 0;
     }
-
-    .nav__list {
+    .nav__menu .nav__list {
+        display: flex; /* Hacemos visible la lista dentro del menú móvil */
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 100%;
-        gap: 3rem;
+        height: auto;
+        gap: 2.5rem;
     }
-    
-    .nav__link {
-        font-size: 1.5rem;
+    .nav__menu .nav__link {
+        font-size: 1.3rem;
     }
 }
