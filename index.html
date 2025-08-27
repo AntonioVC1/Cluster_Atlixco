@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clúster Valle de Atlixco</title>
+    <title>Clúster Valle de Atlixco - Inicio</title>  
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div>
+
     <header class="header">
         <nav class="nav container">
-            <a href="#home" class="nav__logo">
+            <a href="index.html" class="nav__logo">
                 <img src="images/logo.png" alt="Logo Clúster de Atlixco" class="nav__logo-img">
                 <span class="nav__logo-text">Clúster Valle de Atlixco</span>
             </a>
             
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
-                    <li class="nav__item"><a href="#model" class="nav__link">Nuestro Modelo</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="equipo.html" class="nav__link">Nuestro Equipo</a></li>
+                    <li class="nav__item"><a href="eventos.html" class="nav__link">Eventos</a></li>
+                    <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
                 </ul>
             </div>
             <div class="nav__toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </nav>
     </header>
@@ -44,121 +46,15 @@
                     Comprometido con el desarrollo económico de Atlixco a través de la
                     promoción, cooperación y construcción de alianzas estratégicas.
                 </p>
-                <a href="#contact" class="button">Únete al Clúster</a>
+                <a href="contacto.html" class="button">Únete al Clúster</a>
             </div>
         </section>
 
-        <section id="about" class="section about">
-            <div class="container">
-                <h2 class="section__title hidden">Nuestra Vocación</h2>
-                <p class="section__subtitle hidden">Enfocamos nuestros esfuerzos en potenciar las áreas que definen la identidad y el potencial de nuestra región.</p>
-                
-                <div class="vocation__grid hidden">
-                    <div class="vocation__card">
-                        <div class="vocation__card-inner">
-                            <div class="vocation__card-front">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-
-                                <h3>Turismo y Hospitalidad</h3>
-                            </div>
-                            <div class="vocation__card-back">
-                                <p>Promovemos a Atlixco como un destino turístico de primer nivel, destacando su oferta única y servicios de calidad.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="vocation__card">
-                        <div class="vocation__card-inner">
-                            <div class="vocation__card-front">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z"/></svg>
-
-                                <h3>Pueblo Mágico</h3>
-                            </div>
-                            <div class="vocation__card-back">
-                                <p>Resaltamos la cultura, las tradiciones y la belleza arquitectónica que nos distinguen como un Pueblo Mágico.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="vocation__card">
-                        <div class="vocation__card-inner">
-                            <div class="vocation__card-front">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.262c2.903-3.21 7.5-3.21 10.403 0C25.306 8.472 22.89 13 12 13 1.11 13-1.306 8.472 1.597 5.262 4.5-1.07 9.097-1.07 12 5.262z" /><path d="M12 13c-1.45-3.21-3.75-5.23-6.403-5.23C2.296 7.77 0 13 12 13zm0 0c1.45-3.21 3.75-5.23 6.403-5.23C21.704 7.77 24 13 12 13z" /><path d="M12 13v8" /></svg>
-
-                                <h3>Producción Florícola</h3>
-                            </div>
-                            <div class="vocation__card-back">
-                                <p>Impulsamos la innovación, calidad y alcance de mercado de nuestra emblemática industria floral.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="vocation__card">
-                        <div class="vocation__card-inner">
-                            <div class="vocation__card-front">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M7 18.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M12 5H2l-1 3v4l2 1h14l2-4V6l-3-1z"/><path d="M21 11v6l-2 2H5l-2-2v-6"/><path d="M12 5V2"/><path d="M7 15V9"/></svg>
-
-                                <h3>Producción Agrícola</h3>
-                            </div>
-                            <div class="vocation__card-back">
-                                <p>Fomentamos la competitividad y la sostenibilidad del campo de Atlixco a través de tecnología y buenas prácticas.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="vocation__card">
-                        <div class="vocation__card-inner">
-                            <div class="vocation__card-front">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg>
-
-                                <h3>Cadena de Valor</h3>
-                            </div>
-                            <div class="vocation__card-back">
-                                <p>Fortalecemos los servicios y comercios que complementan y potencian nuestras industrias principales.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="model" class="section model">
-            <div class="container">
-                <h2 class="section__title">Nuestro Ecosistema de Colaboración</h2>
-                <p class="section__subtitle">Articulamos la cooperación entre los actores clave para generar beneficios tangibles y un desarrollo integral.</p>
-                
-                <div class="ecosystem__grid">
-                    <div class="ecosystem__card">
-                        <h3>Empresarios</h3>
-                        <p class="role">Como motor del desarrollo económico.</p>
-                        <hr><h4>Propuesta de Valor:</h4>
-                        <p>Promoción de marca e integración vertical y horizontal.</p>
-                    </div>
-                    <div class="ecosystem__card">
-                        <h3>Gobierno</h3>
-                        <p class="role">Aliado estratégico para canalizar propuestas.</p>
-                        <hr><h4>Propuesta de Valor:</h4>
-                        <p>Un canal de diálogo directo con el sector privado y la sociedad.</p>
-                    </div>
-                    <div class="ecosystem__card">
-                        <h3>Academia</h3>
-                        <p class="role">Para la creación de talento y capacidades.</p>
-                        <hr><h4>Propuesta de Valor:</h4>
-                        <p>Alineación de la oferta educativa con el mercado laboral.</p>
-                    </div>
-                    <div class="ecosystem__card">
-                        <h3>Sociedad</h3>
-                        <p class="role">Principal beneficiaria del modelo de Clúster.</p>
-                        <hr><h4>Propuesta de Valor:</h4>
-                        <p>Un canal de interlocución para el bienestar común.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <section id="contact" class="section contact">
             <div class="container">
-                <h2 class="section__title">Contacto</h2>
+                <h2 class="section__title">Contáctanos</h2>
                 <div class="contact__grid">
                     <div class="contact__left">
                         <h3>Envíanos un Mensaje</h3>
@@ -214,30 +110,24 @@
             <div class="footer__grid">
                 <div class="footer__about">
                     <img src="images/logo.png" alt="Logo Clúster de Atlixco" class="footer__logo-img">
-                    <p>Promoviendo la cooperación y alianzas estratégicas para el desarrollo económico de Atlixco.</p>
-                    <div class="footer__social">
-                        <a href="#" class="social-icon facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                        </a>
-
-                        <a href="#" class="social-icon instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
-                        </a>
-                        
-                        <a href="#" class="social-icon linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
-                        </a>
+                    <div class="footer__about-content">
+                        <p>Promoviendo la cooperación y alianzas estratégicas para el desarrollo económico de Atlixco.</p>
+                        <div class="footer__social">
+                            <a href="#" class="social-icon facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                            <a href="#" class="social-icon instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg></a>
+                            <a href="#" class="social-icon linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
+                        </div>
                     </div>
                 </div>
-
                 <div class="footer__navigation">
                     <div class="footer__links footer__links--sitemap">
                         <h4>Mapa del Sitio</h4>
                         <ul>
-                            <li><a href="#home">Inicio</a></li>
-                            <li><a href="#about">Nosotros</a></li>
-                            <li><a href="#model">Nuestro Modelo</a></li>
-                            <li><a href="#contact">Contacto</a></li>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="nosotros.html">Nosotros</a></li>
+                            <li><a href="equipo.html">Nuestro Equipo</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="footer__links">
@@ -248,15 +138,15 @@
                         </ul>
                     </div>
                     <div class="footer__back-to-top">
-                        <a href="#home" class="back-to-top-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><polyline points="5 12 12 5 19 12"/></svg>
-                            Volver Arriba
+                         <a href="#" class="back-to-top-button"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><polyline points="5 12 12 5 19 12"/></svg>
+                            <span class="button-text">Volver Arriba</span>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="footer__copyright">
                 <p>Copyright © 2025 Clúster Valle de Atlixco. Todos los Derechos Reservados.</p>
+                <p>Desarrollado por Sunpowerpro.</p>
             </div>
         </div>
     </footer>
